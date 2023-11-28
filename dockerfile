@@ -9,5 +9,5 @@ RUN pip install -r requirements.txt
 EXPOSE 8000
 RUN ls 
 # runs the production server
-CMD ["python", "app/manage.py"]
+CMD ["python", "app/manage.py", "runserver", "0.0.0.0:8000"]
 
