@@ -7,6 +7,4 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    volumes:
-      - .:/code
     command: python app/main.py runserver 0.0.0.0:8000
