@@ -1,13 +1,23 @@
 FROM python:latest
 
 # Allows docker to cache installed dependencies between builds
-COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+#WORKDIR /code/app
 
-COPY . code
-WORKDIR /code/app
+#COPY . /code/app
 
-EXPOSE 8000
+#COPY requirements.txt requirements.txt
+#RUN pip install --no-cache-dir -r requirements.txt
+
 
 # runs the production server
-CMD ["python", "manage.py"]
+#CMD ["python", "manage.py"]
+
+
+WORKDIR /code/app
+
+COPY . .
+
+RUN pip install -r requirements.txt
+EXPOSE 5000
+
+CMD["python", "main.py"]
