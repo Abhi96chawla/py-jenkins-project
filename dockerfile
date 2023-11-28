@@ -12,12 +12,7 @@ FROM python:latest
 # runs the production server
 #CMD ["python", "manage.py"]
 
-
-WORKDIR /code/app
-
-COPY . .
-
+ADD requirements.txt /
 RUN pip install -r requirements.txt
-EXPOSE 5000
-
-CMD["python", "manage.py"]
+ADD manage.py /
+CMD [ "python", "./main.py" ]
