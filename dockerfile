@@ -7,7 +7,7 @@ COPY . /code/app
 RUN pip install -r requirements.txt
 
 # runs the production server
-#CMD ["python", "manage.py"]
+CMD ["python", "manage.py"]
 
 #ADD requirements.txt /
 #RUN pip install -r requirements.txt
