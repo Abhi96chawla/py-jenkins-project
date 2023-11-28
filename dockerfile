@@ -6,6 +6,7 @@ WORKDIR /code/app
 COPY . /code/app
 RUN pip install -r requirements.txt
 
+CMD ["ls"]
 # runs the production server
 CMD ["python", "manage.py"]
 
