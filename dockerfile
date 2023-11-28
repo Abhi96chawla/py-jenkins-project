@@ -5,9 +5,9 @@ COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . code
-WORKDIR /code
+WORKDIR /code/app
 
 EXPOSE 8000
 
 # runs the production server
-CMD ["python", "app/manage.py"]
+CMD ["python", "manage.py"]
